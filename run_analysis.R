@@ -2,6 +2,7 @@ library(dplyr)
 library(data.table)
 
 #download zip file and unzip to C:\Temp directory
+if (!file.exists("C:\\Temp")){dir.create("C:\\Temp")}
 smartphone_zip_dest <- "C:\\Temp\\smartphone_dataset.zip"
 smartphone_zip_url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 smartphone_unzip_dest <- "C:\\Temp"
