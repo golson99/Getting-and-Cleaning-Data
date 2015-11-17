@@ -1,4 +1,5 @@
-Enter file contents herelibrary(dplyr)
+library(dplyr)
+library(data.table)
 
 #download zip file and unzip to C:\Temp directory
 smartphone_zip_dest <- "C:\\Temp\\smartphone_dataset.zip"
@@ -50,8 +51,6 @@ all_data <- merge(all_data, activity_labels, by="activity_id")
 
 #use dplyr to group by subject/activity apply mean to all data columns
 tidy_data <- all_data %>% group_by(subject, activity) %>% summarize_each(funs(mean))
-
-all_data_melt <- 
 
 #write tidy data to file
 write.table(tidy_data, file="C:\\Temp\\tidy_data.txt")
